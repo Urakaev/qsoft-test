@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.page{
+    font-family: 'Roboto', sans-serif;
+}
+.page__container{
+    min-width: 375px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+
+/*header block*/
+
+.header{
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 70px;
+}
+
+.header-container{
+    height: 80px;
+    display: flex;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    align-items: center;
+    background: #FFFFFF;
+    justify-content: space-between;
+    
+}
+
+.header-container__logo{
+    margin-right: 60px;
+}
+
+@media screen and (max-width: 1170px) {
+    .header-container{
+        padding: 0 20px;
+    }
+
+    .header-container__logo{
+        margin-right: 50px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header-container{
+       flex-wrap: wrap;
+       height: auto;
+       padding: 0;
+    }
+    .header-container__logo{
+        padding: 16px 0 16px 21px;
+    }
+}
+
+/*search block*/
+
+.search{
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    max-width: 763px;
+    display: flex;
+    align-items: center;
+}
+.search__input{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #EBEBF1;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: #BBC4D6;
+    padding-left: 39px;
+}
+.search__icon{
+    position: absolute;
+    left: 14px;
+    background-image: url(./images/search-icon.svg);
+    width: 16px;
+    height: 16px;
+}
+@media screen and (max-width: 767px) {
+    .search{
+       order: 1;
+    }
+    .search__input{
+        border-radius: 0;
+        border: none;
+        border-top: 1px solid #EBEBF1;
+        padding-left: 49px;
+    }
+    .search__icon{
+        left: 24px;
+    }
+}
+
+/*profile block*/
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+.profile_place_top{
+    border-left: 1px solid #EBEBF1;
+    padding-left: 19px;
+    margin-left: 60px;
+    min-height: 80px;
+}
+.profile__name{
+    margin-right: 10px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: #768298;
+}
+
+.profile__picture {
+    height: 40px;
+    width: 40px;
+}
+
+.profile__picture img{
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 1170px) {
+    .profile_place_top{
+        margin-left: 50px
+    }
+}
+@media screen and (max-width: 767px) {
+    .profile_place_top{
+        border-left: none;
+        padding-left: unset;
+        margin-left: unset;
+        min-height: unset;
+        width: 24px;
+        height: 24px;
+        background-image: url(./images/profile-icon.svg);
+        background-size: cover;
+        margin-right: 21px;
+    }
+    .profile__name{
+        display: none;
+    }
+    .profile__picture {
+        display: none;
+    }
+}
+
+/*main block*/
+
+.content{
+    margin: 70px auto 0;
+    max-width: 1170px;
+}
+
+@media screen and (max-width: 1170px) {
+    .content{
+        padding: 0 20px
+    }
+}
+/*partners*/
+.partners{
+    margin-bottom: 70px;
+}
+.partners__title{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 58px;
+    text-transform: uppercase;
+    color: #121920;
+    margin-bottom: 30px;    
+}
+.partners-list{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px
+}
+.partner-card{
+    width: 270px;
+    height: 120px;
+    padding: 18px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+}
+.partner-card:hover{
+    box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+}
+.partner-card__picture{
+    max-width: 100%;
+    object-fit: cover;
+    max-height: 100%;
+}
+@media screen and (max-width: 1170px) {
+    .partners__title{
+        font-size: 28px;
+        line-height: 45px;
+    }
+    .partners-list{
+        gap: 19px;
+    }
+    .partner-card{
+        width: 230px;
+        padding: 21px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .partner-card{
+        width: 335px;
+        height: 140px;
+        padding: 31px;
+    }
+}
